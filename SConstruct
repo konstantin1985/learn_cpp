@@ -2,11 +2,13 @@ VariantDir('Debug', 'src', duplicate = 0)
 
 env = Environment()
 
-env.Append(CPPPATH=["Debug/patterns/proxy"])
+env.Append(CPPPATH=["Debug/patterns/proxy",
+                    "Debug/filesystem"])
 
 src_files = ["Debug/learn_cpp.cpp"]
 
-src_files_fields = ["Debug/patterns/proxy/proxy.cpp"]
+src_files_fields = ["Debug/patterns/proxy/proxy.cpp",
+                    "Debug/filesystem/filesystem_basic.cpp"]
                     
 src_files += src_files_fields
 
