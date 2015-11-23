@@ -10,40 +10,27 @@ class Number
 public:
 
 	static Number *GetInstance(){
-
 		std::cout << "GetInstance" << std::endl;
-
 		if(!instance){
-		instance = new Number();
+			instance = new Number();
 		}
-
 		return instance;
-
 	}
-
-
-
-
-	//Number(){std::cout << "Number Constructor" << std::endl;}
 
 	void PrintSomething(){
 		std::cout << "PrintSomething" << std::endl;
 	}
 
-
-
-
-
 protected:
-	Number(){};
+	Number(){
+		std::cout << "Number Constructor" << std::endl;
+	};
 
 private:
 	static Number *instance;
 
 };
 
-
-
-//void TestSingleton();
+void TestSingleton();
 
 #endif /* SRC_PATTERNS_SINGLETON_SINGLETON_H_ */

@@ -13,11 +13,7 @@
 using namespace std;
 
 int main() {
-	cout << "!!!Hello World 1!!!" << endl; // prints !!!Hello World!!!
-	//TestSingleton();
-
-	Number::GetInstance()->PrintSomething();
-
-
+	cout << "!!!Hello World 555!!!" << endl; // prints !!!Hello World!!!
+	TestSingleton();
 	return 0;
 }
