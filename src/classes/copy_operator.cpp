@@ -19,6 +19,10 @@ void TestCopyOperator(){
 	g = h;                                               //Assignment Operator
 	std::cout << "g: " << g.TestClassName << std::endl;  //g: osel
 	std::cout << "h: " << h.TestClassName << std::endl;  //h: osel
+	std::cout << std::string(100, '*') << std::endl;
+	TestClass i("kozel");                                //Integer TestClass constructor
+	TestClass j = i;                                     //Copy constructor
+
 }
 
 

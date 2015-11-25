@@ -5,6 +5,25 @@
 #include <iostream>
 #include <string.h>
 
+
+//http://stackoverflow.com/questions/11706040/whats-the-difference-between-assignment-operator-and-copy-constructor
+
+/*
+If a new object has to be created before the copying can occur, the copy constructor is used.
+If a new object does not have to be created before the copying can occur, the assignment operator is used.
+*/
+
+//http://stackoverflow.com/questions/4172722/what-is-the-rule-of-three
+
+/*
+If you need to explicitly declare either the destructor, copy constructor or copy assignment operator yourself,
+you probably need to explicitly declare all three of them.
+
+Most of the time, you do not need to manage a resource yourself, because an existing class such as std::string already does it for you.
+Just compare the simple code using a std::string member to the convoluted and error-prone alternative using a char* and you should be convinced.
+As long as you stay away from raw pointer members, the rule of three is unlikely to concern your own code.
+*/
+
 class TestClass{
 
 public:
@@ -20,11 +39,16 @@ public:
 		TestClassName = s;
 	}
 
-
+	//Assignment operator
 	TestClass& operator=(const TestClass& Other){
 		std::cout << "Assignment Operator" << std::endl;
 		TestClassName = Other.TestClassName;
 		return *this; //because "this" is a pointer we need to dereference it
+	}
+
+    //Copy constructor
+	TestClass(const TestClass& rhs) : TestClassName(rhs.TestClassName){
+		std::cout << "Copy constructor" << std::endl;
 	}
 
 };
