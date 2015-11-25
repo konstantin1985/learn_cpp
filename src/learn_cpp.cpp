@@ -7,13 +7,13 @@
 //============================================================================
 
 #include <iostream>
-#include "singleton.h"
+#include "factory_method.h"
 
 
 using namespace std;
 
 int main() {
 	cout << "!!!Hello World 555!!!" << endl; // prints !!!Hello World!!!
-	TestSingleton();
+	TestFactoryMethodPattern();
 	return 0;
 }

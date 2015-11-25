@@ -4,13 +4,17 @@ env = Environment()
 
 env.Append(CPPPATH=["Debug/patterns/proxy",
                     "Debug/patterns/singleton",
-                    "Debug/filesystem"])
+                    "Debug/patterns/factory_method",
+                    "Debug/filesystem",
+                    ])
 
 src_files = ["Debug/learn_cpp.cpp"]
 
 src_files_fields = ["Debug/patterns/proxy/proxy.cpp",
                     "Debug/patterns/singleton/singleton.cpp",
-                    "Debug/filesystem/filesystem_basic.cpp"]
+                    "Debug/patterns/factory_method/factory_method.cpp",
+                    "Debug/filesystem/filesystem_basic.cpp",
+                    ]
                     
 src_files += src_files_fields
 
