@@ -7,13 +7,14 @@
 //============================================================================
 
 #include <iostream>
-#include "factory_method.h"
+#include "copy_operator.h"
 
 
 using namespace std;
 
 int main() {
 	cout << "!!!Hello World 555!!!" << endl; // prints !!!Hello World!!!
-	TestFactoryMethodPattern();
+	TestCopyOperator();
 	return 0;
 }
+
