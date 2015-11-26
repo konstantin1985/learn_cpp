@@ -16,6 +16,7 @@ src_files_fields = ["Debug/patterns/proxy/proxy.cpp",
                     "Debug/patterns/singleton/singleton.cpp",
                     "Debug/patterns/factory_method/factory_method.cpp",
                     "Debug/standard_library/erase_remove.cpp",
+                    "Debug/standard_library/copy_objects_3.cpp",
                     "Debug/classes/copy_operator.cpp",
                     "Debug/filesystem/filesystem_basic.cpp",
                     ]
