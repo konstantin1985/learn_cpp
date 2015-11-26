@@ -7,14 +7,14 @@
 //============================================================================
 
 #include <iostream>
-#include "copy_operator.h"
+#include "erase_remove.h"
 
 
 using namespace std;
 
 int main() {
 	cout << "!!!Hello World 555!!!" << endl; // prints !!!Hello World!!!
-	TestCopyOperator();
+	EraseRemoveTest();
 	return 0;
 }
 
