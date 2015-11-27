@@ -7,14 +7,16 @@
 //============================================================================
 
 #include <iostream>
-#include "erase_remove.h"
+#include "copy_objects_3.h"
 
 
 using namespace std;
 
 int main() {
-	cout << "!!!Hello World 555!!!" << endl; // prints !!!Hello World!!!
-	EraseRemoveIfTest();
+
+	cout << "!!!Hello World 777!!!" << endl; // prints !!!Hello World!!!
+	CopyObjects3Test();
+
 	return 0;
 }
 
