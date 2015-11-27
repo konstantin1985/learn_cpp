@@ -7,7 +7,7 @@
 //============================================================================
 
 #include <iostream>
-#include "size_empty_splice.h"
+#include "assign.h"
 
 
 using namespace std;
@@ -15,7 +15,7 @@ using namespace std;
 int main() {
 
 	cout << "!!!Hello World 555!!!" << endl;
-	TestSizeEmpty1();
+	AssignTest();
 
 	return 0;
 }
