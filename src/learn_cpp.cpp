@@ -14,7 +14,7 @@ using namespace std;
 
 int main() {
 	cout << "!!!Hello World 555!!!" << endl; // prints !!!Hello World!!!
-	EraseRemoveTest();
+	EraseRemoveIfTest();
 	return 0;
 }
 

@@ -14,6 +14,14 @@ void PrintVector(std::vector<T> v){
 	std::cout << std::endl;
 }
 
+bool ReturnIntTrue(const int & a){
+	return true;
+}
+
+bool ReturnIntFalse(const int & a){
+	return false;
+}
+
 void EraseRemoveTest(){
 
 	std::vector<int> v;
@@ -30,7 +38,7 @@ void EraseRemoveTest(){
 
 	std::remove(v.begin(), v.end(), 99);
 	std::cout << v.size() << std::endl;   //10
-	PrintVector(v);                       //1 2 3 5 7 8 9 8 9 99=
+	PrintVector(v);                       //1 2 3 5 7 8 9 8 9 99
 
 
 	std::cout << std::string(100, '*') << std::endl;
@@ -86,5 +94,33 @@ void EraseRemoveTest(){
 }
 
 
+void EraseRemoveIfTest(){
+
+	std::vector<int> v;
+	v.reserve(10);
+	for(int i = 1; i <= 10; ++i){
+		v.push_back(i);
+	}
+
+	v[3] = v[5] = v[9] = 99;
+	PrintVector(v); //1 2 3 99 5 99 7 8 9 99
+	v.erase(remove_if(v.begin(), v.end(), ReturnIntTrue), v.end());
+	PrintVector(v); //nothing
+
+	std::cout << std::string(100, '*') << std::endl;
+
+	std::vector<int> w;
+	w.reserve(10);
+	for(int i = 1; i <= 10; ++i){
+		w.push_back(i);
+	}
+
+	w[3] = w[5] = w[9] = 99;
+	PrintVector(w); //1 2 3 99 5 99 7 8 9 99
+	w.erase(remove_if(w.begin(), w.end(), ReturnIntFalse), w.end());
+	PrintVector(w); //1 2 3 99 5 99 7 8 9 99
+
+
+}
 
 

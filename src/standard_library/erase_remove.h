@@ -15,7 +15,7 @@
 
 
 void EraseRemoveTest();
-
+void EraseRemoveIfTest();
 
 
 
