@@ -7,15 +7,15 @@
 //============================================================================
 
 #include <iostream>
-#include "copy_objects_3.h"
+#include "size_empty_splice.h"
 
 
 using namespace std;
 
 int main() {
 
-	cout << "!!!Hello World 777!!!" << endl; // prints !!!Hello World!!!
-	CopyObjects3Test();
+	cout << "!!!Hello World 555!!!" << endl;
+	TestSizeEmpty1();
 
 	return 0;
 }
