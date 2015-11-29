@@ -12,12 +12,15 @@
 #include <list>
 #include <algorithm>
 #include <iostream>
+#include <map>
 
 
 void EraseRemoveTest();
 void EraseRemoveIfTest();
 
-
+void EraseRemoveContiguousMemory();
+void EraseRemoveList();
+void EraseRemoveAssociative();
 
 
 

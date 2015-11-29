@@ -7,7 +7,7 @@
 //============================================================================
 
 #include <iostream>
-#include "assign.h"
+#include "erase_remove.h"
 
 
 using namespace std;
@@ -15,7 +15,7 @@ using namespace std;
 int main() {
 
 	cout << "!!!Hello World 555!!!" << endl;
-	AssignTest();
+	EraseRemoveAssociative();
 
 	return 0;
 }
