@@ -7,15 +7,19 @@
 //============================================================================
 
 #include <iostream>
-#include "erase_remove.h"
+#include "sort.h"
+
+
 
 
 using namespace std;
 
+
 int main() {
 
 	cout << "!!!Hello World 555!!!" << endl;
-	EraseRemoveAssociative();
+
+	SortTest();
 
 	return 0;
 }
