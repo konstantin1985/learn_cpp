@@ -7,9 +7,7 @@
 //============================================================================
 
 #include <iostream>
-#include "sort.h"
-
-
+#include "slicing.h"
 
 
 using namespace std;
@@ -19,7 +17,7 @@ int main() {
 
 	cout << "!!!Hello World 555!!!" << endl;
 
-	SortTest();
+	SlicingTestSecond();
 
 	return 0;
 }
