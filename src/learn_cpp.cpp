@@ -17,7 +17,7 @@ int main() {
 
 	cout << "!!!Hello World 555!!!" << endl;
 
-	SlicingTestSecond();
+	SlicingTestThird();
 
 	return 0;
 }
