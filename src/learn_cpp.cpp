@@ -1,24 +1,11 @@
-//============================================================================
-// Name        : learn_cpp.cpp
-// Author      : 
-// Version     :
-// Copyright   : Your copyright notice
-// Description : Hello World in C++, Ansi-style
-//============================================================================
+//#include "class_static.h"
+#include "iostream"
 
-#include <iostream>
-#include "slicing.h"
+#include "callback.h"
 
 
-using namespace std;
-
-
-int main() {
-
-	cout << "!!!Hello World 555!!!" << endl;
-
-	SlicingTestThird();
-
-	return 0;
+int main(int argc, char *argv[]){
+	std::cout << "Kozel 1" << std::endl;
+	CallBackTest();
+	std::cout << "Kozel 2" << std::endl;
 }
-
