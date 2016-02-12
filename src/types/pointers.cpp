@@ -29,6 +29,20 @@ For example, if p were a member variable pointing to a resource who's lifetime w
 then setting p to NULL could be a useful way of indicating the presence or absence of the resource.
 */
 
+/* Point #2
+
+Проверка на NULL в принципе не обязательна, т.к. внутри delete есть эта проверка.
+http://stackoverflow.com/questions/4190703/is-it-safe-to-delete-a-null-pointer
+
+    if (__receiveWorkThread != PH_NULLPTR) {
+        delete __receiveWorkThread;
+        __receiveWorkThread = PH_NULLPTR;
+    }
+
+Скорее всего это делается в Phoenix, т.к. оператор delete теоретически может быть переопределен (overload)
+
+*/
+
 void NullPointerTest(){
 
 	std::cout << "NullPointerTest()" << std::endl;
@@ -53,7 +67,7 @@ void NullPointerTest(){
 
 	if (a){
 		std::cout << "!a" << std::endl;		                   //Won't come here
-		delete a;
+		delete a;                                              //And there will be no program crash
 		a = NULL;
 	}
 

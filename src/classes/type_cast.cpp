@@ -32,6 +32,7 @@ void TypeCastTestFirst(){
 }
 
 //http://stackoverflow.com/questions/6322949/downcasting-using-the-static-cast-in-c
+//http://stackoverflow.com/questions/28002/regular-cast-vs-static-cast-vs-dynamic-cast
 
 Grand * GetOne(int t){
 	Grand *p;
@@ -55,3 +56,44 @@ Otherwise, the expression evaluates to 0, the null pointer.
 The purpose of this operator is to allow upcasts within a class hierarchy (such type
 casts being safe because of the is-a relationship) and to disallow other casts.
 */
+
+
+
+/*
+On static_cast:
+http://stackoverflow.com/questions/28002/regular-cast-vs-static-cast-vs-dynamic-cast
+
+static_cast is used for cases where you basically want to reverse an implicit conversion, with a few restrictions and additions.
+static_cast performs no runtime checks.
+This should be used if you know that you refer to an object of a specific type, and thus a check would be unnecessary.
+Example:
+
+void func(void *data) {
+  // Conversion from MyClass* -> void* is implicit
+  MyClass *c = static_cast<MyClass*>(data);
+  ...
+}
+
+int main() {
+  MyClass c;
+  start_thread(&func, &c)  // func(&c) will be called
+      .join();
+}
+In this example, you know that you passed a MyClass object, and thus there isn't any need for a runtime check to ensure this.
+*/
+
+/*
+Пример из CLI:
+
+bool Cli::LoopbackDetection::Command::LoopbackDetectionRecoveryTime(CliFunctionParms cliParms)
+{
+	//Это плохой пример, в "новых" компонентах идет провека на Null pointer
+	//http://stackoverflow.com/questions/2469013/should-static-castderived-base-pointer-give-compile-time-error
+	//вроде как в подобных ситуациях dynamic_cast безопаснее
+    CliInteger *cliRecoverySeconds = dynamic_cast<CliInteger *>(cliParms.objArray[0]);
+    ...
+    //This should be used if you know that you refer to an object of a specific type, and thus a check would be unnecessary.
+    //Мы знаем, что то, что вернет cliRecoverySeconds->Get() можно конвертнуть в PH_uint32, поэтому юзаем static_cast
+    PH_uint32 recoverySeconds = static_cast<PH_uint32>(cliRecoverySeconds->Get());
+*/
+

@@ -32,7 +32,7 @@ void SlicingTestSecond(){
 	ptrD->name = "Tommy";
 	ptrD->breed = "Kangal Dog";
 	ptrP = ptrD;
-	std::cout << ((Dog *)ptrP)->breed;
+	std::cout << ((Dog *)ptrP)->breed << std::endl; //Kangal Dog
 	//std::cout << ptrP->breed; //src/classes/slicing.cpp:25:21: error: 'class Pet' has no member named 'breed'
 
 }

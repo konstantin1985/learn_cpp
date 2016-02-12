@@ -8,14 +8,17 @@ env.Append(CPPPATH=["Debug/patterns/proxy",
                     "Debug/patterns/callback",
                     "Debug/standard_library",
                     "Debug/classes",
+                    "Debug/file",
                     "Debug/system",
                     "Debug/types",
                     ])
 
 src_files = ["Debug/learn_cpp.cpp"]
 
-src_files_fields = ["Debug/classes/copy_operator.cpp",
+src_files_fields = ["Debug/classes/copy_constructor.cpp",
+                    "Debug/classes/copy_operator.cpp",
                     "Debug/classes/slicing.cpp",
+                    "Debug/classes/type_cast.cpp",
                     "Debug/patterns/proxy/proxy.cpp",
                     "Debug/patterns/singleton/singleton.cpp",
                     "Debug/patterns/factory_method/factory_method.cpp",
@@ -29,8 +32,10 @@ src_files_fields = ["Debug/classes/copy_operator.cpp",
                     "Debug/system/filesystem_basic.cpp",
                     "Debug/system/system_time.cpp",
                     "Debug/types/class_static.cpp",
-                    "Debug/types/enum.cpp"
+                    "Debug/types/enum.cpp",
+                    "Debug/types/pointers.cpp",
                     ]
+
                     
 src_files += src_files_fields
 
